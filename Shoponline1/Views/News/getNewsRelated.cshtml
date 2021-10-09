@@ -1,0 +1,30 @@
+﻿@model List<Shoponline1.Models.News>
+
+@foreach (var item in Model)
+{
+
+    <article class="entry entry-grid">
+        <figure class="entry-media">
+            <a href="@ViewBag.meta/@item.meta">
+                <img src="~/Assets/fontend/images/blog/grid/3cols/@item.img" alt="image desc">
+            </a>
+        </figure><!-- End .entry-media -->
+
+        <div class="entry-body">
+            <div class="entry-meta">
+                <a href="#">@item.datebegin</a>
+                <span class="meta-separator">|</span>
+                <a href="#">4 Comments</a>
+            </div><!-- End .entry-meta -->
+
+            <h2 class="entry-title">
+                <a href="@ViewBag.meta/@item.meta">@item.name .</a>
+            </h2><!-- End .entry-title -->
+
+            <div class="entry-cats">
+                in <a href="#">Travel</a>
+            </div><!-- End .entry-cats -->
+        </div><!-- End .entry-body -->
+    </article><!-- End .entry -->
+
+}

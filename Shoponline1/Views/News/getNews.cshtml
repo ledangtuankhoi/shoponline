@@ -1,0 +1,33 @@
+﻿@model List<Shoponline1.Models.News>
+
+@*vì data trong blog không chia ra các mục loại của blog nên chỉ cho thể xuất tất cả *@
+@foreach (var item in Model)
+{
+
+    <div class="entry-item lifestyle shopping col-sm-6 col-lg-4">
+        <article class="entry entry-mask">
+            <figure class="entry-media">
+                <a href="@ViewBag.metaBlog/@item.meta">
+                    <img src="~/Assets/fontend/images/blog/mask/grid/@item.img" alt="image desc">
+                </a>
+            </figure><!-- End .entry-media -->
+
+            <div class="entry-body">
+                <div class="entry-meta">
+                    <a href="#">@item.datebegin</a>
+                    <span class="meta-separator">|</span>
+                    <a href="#">2 Comments</a>
+                </div><!-- End .entry-meta -->
+
+                <h2 class="entry-title">
+                    <a href="@ViewBag.meta/@item.meta">@item.name</a>
+                </h2><!-- End .entry-title -->
+
+                <div class="entry-cats">
+                    in <a href="#">Lifestyle</a>,
+                    <a href="#">Shopping</a>
+                </div><!-- End .entry-cats -->
+            </div><!-- End .entry-body -->
+        </article><!-- End .entry -->
+    </div><!-- End .entry-item -->
+}
