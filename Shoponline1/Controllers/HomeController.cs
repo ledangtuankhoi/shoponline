@@ -7,6 +7,7 @@ using Shoponline1.Models;
 
 namespace Shoponline1.Controllers
 {
+    [HandleError]
     public class HomeController : Controller
     {
         ShopOnlineEntities1 _db = new ShopOnlineEntities1();
@@ -39,6 +40,7 @@ namespace Shoponline1.Controllers
 
         public ActionResult getNews()
         {
+            ViewBag.meta = "tin-tuc-su-kien";
             var posts = from table in _db.News
                         where table.hide == true
                         orderby table.datebegin

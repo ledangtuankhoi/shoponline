@@ -9,10 +9,6 @@ namespace Shoponline1
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
-
-            
-
-
             routes.MapRoute("News", "{type}",
               new { controller = "News", action = "Index", meta = UrlParameter.Optional },
               new RouteValueDictionary

@@ -45,6 +45,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -114,12 +120,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework">
-      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
-    </Reference>
-    <Reference Include="EntityFramework.SqlServer">
-      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.AspNet.Identity.Core">
       <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.3\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
     </Reference>
@@ -170,8 +170,13 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Areas\admin\adminAreaRegistration.cs" />
+    <Compile Include="Areas\admin\Controllers\adminNewsController.cs" />
+    <Compile Include="Areas\admin\Controllers\categoriesController.cs" />
     <Compile Include="Areas\admin\Controllers\DefaultController.cs" />
+    <Compile Include="Areas\admin\Controllers\menusController.cs" />
+    <Compile Include="Areas\admin\Controllers\productsController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\NewsController.cs" />
@@ -3805,6 +3810,26 @@
     <Content Include="Areas\admin\Assets\vendor\select2\src\scss\theme\default\_single.scss" />
     <Content Include="Areas\admin\Assets\vendor\select2\src\scss\theme\default\layout.scss" />
     <Content Include="Areas\admin\Views\Default\Index.cshtml" />
+    <Content Include="Areas\admin\Views\menus\Create.cshtml" />
+    <Content Include="Areas\admin\Views\menus\Delete.cshtml" />
+    <Content Include="Areas\admin\Views\menus\Details.cshtml" />
+    <Content Include="Areas\admin\Views\menus\Edit.cshtml" />
+    <Content Include="Areas\admin\Views\menus\Index.cshtml" />
+    <Content Include="Areas\admin\Views\products\Create.cshtml" />
+    <Content Include="Areas\admin\Views\products\Delete.cshtml" />
+    <Content Include="Areas\admin\Views\products\Details.cshtml" />
+    <Content Include="Areas\admin\Views\products\Edit.cshtml" />
+    <Content Include="Areas\admin\Views\products\Index.cshtml" />
+    <Content Include="Areas\admin\Views\categories\Create.cshtml" />
+    <Content Include="Areas\admin\Views\categories\Delete.cshtml" />
+    <Content Include="Areas\admin\Views\categories\Details.cshtml" />
+    <Content Include="Areas\admin\Views\categories\Edit.cshtml" />
+    <Content Include="Areas\admin\Views\categories\Index.cshtml" />
+    <Content Include="Areas\admin\Views\adminNews\Create.cshtml" />
+    <Content Include="Areas\admin\Views\adminNews\Delete.cshtml" />
+    <Content Include="Areas\admin\Views\adminNews\Details.cshtml" />
+    <Content Include="Areas\admin\Views\adminNews\Edit.cshtml" />
+    <Content Include="Areas\admin\Views\adminNews\Index.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -5359,6 +5384,7 @@
     <Content Include="Views\Shared\template\RuangAdmin-master\dropdowns.html" />
     <Content Include="Views\Shared\template\RuangAdmin-master\font\OFL.txt" />
     <Content Include="Views\Shared\template\RuangAdmin-master\form_advanceds.html" />
+    <Content Include="Views\Shared\template\RuangAdmin-master\form_basics - Copy.html" />
     <Content Include="Views\Shared\template\RuangAdmin-master\form_basics.html" />
     <Content Include="Views\Shared\template\RuangAdmin-master\img\boy.png" />
     <Content Include="Views\Shared\template\RuangAdmin-master\img\error.svg" />
@@ -7531,6 +7557,7 @@
     <Content Include="Views\News\getNews.cshtml" />
     <Content Include="Views\News\getNewsRelated.cshtml" />
     <Content Include="Views\Product\getProductRelated.cshtml" />
+    <Content Include="Views\Error\page404.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

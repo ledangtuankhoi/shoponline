@@ -1,30 +1,59 @@
 ﻿@model List<Shoponline1.Models.News>
+<div class="related-posts">
+    <h3 class="title">Related Posts</h3><!-- End .title -->
 
-@foreach (var item in Model)
-{
+    <div class="owl-carousel owl-simple" data-toggle="owl"
+         data-owl-options='{
+                                "nav": false,
+                                "dots": true,
+                                "margin": 20,
+                                "loop": false,
+                                "responsive": {
+                                    "0": {
+                                        "items":1
+                                    },
+                                    "480": {
+                                        "items":2
+                                    },
+                                    "768": {
+                                        "items":3
+                                    },
+                                    "992": {
+                                        "items":4
+                                    }
+                                }
+                            }'>
+     
 
-    <article class="entry entry-grid">
-        <figure class="entry-media">
-            <a href="@ViewBag.meta/@item.meta">
-                <img src="~/Assets/fontend/images/blog/grid/3cols/@item.img" alt="image desc">
-            </a>
-        </figure><!-- End .entry-media -->
+        @foreach (var item in Model)
+        {
 
-        <div class="entry-body">
-            <div class="entry-meta">
-                <a href="#">@item.datebegin</a>
-                <span class="meta-separator">|</span>
-                <a href="#">4 Comments</a>
-            </div><!-- End .entry-meta -->
+            <article class="entry entry-grid">
+                <figure class="entry-media">
+                    <a href="@ViewBag.meta/@item.meta">
+                        <img src="~/Assets/fontend/images/blog/grid/3cols/@item.img" alt="image desc">
+                    </a>
+                </figure><!-- End .entry-media -->
 
-            <h2 class="entry-title">
-                <a href="@ViewBag.meta/@item.meta">@item.name .</a>
-            </h2><!-- End .entry-title -->
+                <div class="entry-body">
+                    <div class="entry-meta">
+                        <a href="#">@item.datebegin</a>
+                        <span class="meta-separator">|</span>
+                        <a href="#">4 Comments</a>
+                    </div><!-- End .entry-meta -->
 
-            <div class="entry-cats">
-                in <a href="#">Travel</a>
-            </div><!-- End .entry-cats -->
-        </div><!-- End .entry-body -->
-    </article><!-- End .entry -->
+                    <h2 class="entry-title">
+                        <a href="@ViewBag.meta/@item.meta">@item.name .</a>
+                    </h2><!-- End .entry-title -->
 
-}
+                    <div class="entry-cats">
+                        in <a href="#">Travel</a>
+                    </div><!-- End .entry-cats -->
+                </div><!-- End .entry-body -->
+            </article><!-- End .entry -->
+
+        }
+
+
+    </div><!-- End .owl-carousel -->
+</div><!-- End .related-posts -->
