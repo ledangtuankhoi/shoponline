@@ -1,0 +1,100 @@
+﻿ 
+<div class="col-lg-4 col-md-4">
+    <div class="product-lg">
+        <figure class="product-media">
+            <a href="product.html">
+                <img src="~/Assets/fontend/images/demos/demo-22/featured/@Model[0].img" alt="Product image" class="product-image">
+            </a>
+
+        </figure><!-- End .product-media -->
+
+        <div class="product-body">
+            <h3 class="product-title"><a href="product.html">@Model[0].name  </a></h3><!-- End .product-title -->
+            <div class="product-price">
+                <span class="new-price">$@Model[0].price</span>
+            </div><!-- End .product-price -->
+            <div class="action">
+                <a href="category.html">shop now</a>
+            </div>
+        </div><!-- End .product-body -->
+    </div><!-- End .col-sm-6 col-md-4 col-lg-3 -->
+</div>
+<div class="col-lg-8 col-md-8">
+    <div class="tab-content">
+        <div class="tab-pane fade show active" id="tab-featured" role="tabpanel" aria-labelledby="tab-featured-link">
+
+            <div class="row products all">
+                @for (int i = 1; i < 7;)
+                {
+
+                    if (Model[i].categoryid == 1)
+                    {
+
+                        { i++; }
+                        <div class="col-lg-4 col-6">
+                            <div class="product product-3 text-center">
+                                <figure class="product-media">
+                                    <a href="product.html">
+                                        <img src="~/Assets/fontend/images/demos/demo-22/featured/@Model[i].img" alt="Product image" class="product-image">
+                                    </a>
+
+                                    <div class="product-action-vertical">
+                                        <a href="#" class="btn-product-icon btn-wishlist btn-expandable"><span>add to wishlist</span></a>
+                                    </div><!-- End .product-action-vertical -->
+                                </figure><!-- End .product-media -->
+
+                                <div class="product-body">
+                                    <h3 class="product-title"><a href="product.html">@Model[i].name</a></h3><!-- End .product-title -->
+                                    <div class="product-price">
+                                        <span class="new-price">$@Model[i].price</span>
+                                    </div><!-- End .product-price -->
+                                </div><!-- End .product-body -->
+
+
+                            </div><!-- End .product -->
+                        </div><!-- End .col-sm-6 col-md-4 col-lg-3 -->
+                    }
+
+
+                }
+
+            </div><!-- End .row -->
+        </div><!-- .End .tab-pane -->
+        <div class="tab-pane fade" id="tab-best" role="tabpanel" aria-labelledby="tab-best-link">
+
+            <div class="row products">
+                @for (int i = 1; i < 7;)
+                {
+
+                    if (Model[i].categoryid == 1)
+                    {
+
+                        { i++; }
+                        <div class="col-lg-4 col-6">
+                            <div class="product product-3 text-center">
+                                <figure class="product-media"> 
+                                    <a href="product.html">
+                                        <img src="~/Assets/fontend/images/demos/demo-22/featured/@Model[i].img" alt="Product image" class="product-image">
+                                    </a>
+
+                                    <div class="product-action-vertical">
+                                        <a href="#" class="btn-product-icon btn-wishlist btn-expandable"><span>add to wishlist</span></a>
+                                    </div><!-- End .product-action-vertical -->
+                                </figure><!-- End .product-media -->
+
+                                <div class="product-body"> 
+                                    <h3 class="product-title"><a href="product.html">@Model[i].name</a></h3><!-- End .product-title -->
+                                    <div class="product-price">
+                                        <span class="new-price">$@Model[i].price</span> 
+                                    </div><!-- End .product-price -->
+                                </div><!-- End .product-body -->
+                             
+                            </div><!-- End .product -->
+                        </div><!-- End .col-sm-6 col-md-4 col-lg-3 -->
+                    }
+                }
+                    </div>
+        </div>
+    </div>
+
+</div>

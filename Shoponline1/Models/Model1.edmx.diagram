@@ -4,11 +4,13 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="b55c9ebb81ea4615951ae4bf2df9fcac" Name="Diagram1">
-        <EntityTypeShape EntityType="ShopOnlineModel.category" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="ShopOnlineModel.menu" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="ShopOnlineModel.News" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="ShopOnlineModel.product" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
+      <Diagram DiagramId="16414dec25df450ca0ad3bebe4c62d69" Name="Diagram1">
+        <EntityTypeShape EntityType="ShopOnlineModel.Banner" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ShopOnlineModel.Brand" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ShopOnlineModel.category" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ShopOnlineModel.menu" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ShopOnlineModel.News" Width="1.5" PointX="2.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ShopOnlineModel.product" Width="1.5" PointX="4.75" PointY="4.75" IsExpanded="true" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

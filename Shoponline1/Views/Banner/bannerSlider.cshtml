@@ -1,0 +1,19 @@
+﻿
+
+@foreach (var item in Model)
+{
+    <div class="intro-slide banner-lg" style="background-image: url(Assets/fontend/images/demos/demo-22/slider/@item.img);">
+        <div class="intro">
+            <div class="title">
+                <a>@item.title</a>
+            </div>
+            <div class="content">
+                @Html.Raw(HttpUtility.HtmlDecode(@item.content.ToString()))
+               
+            </div>
+            <div class="action">
+                <a href="@item.action">discover now</a>
+            </div>
+        </div>
+    </div>
+}

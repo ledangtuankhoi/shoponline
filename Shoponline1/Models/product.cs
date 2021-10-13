@@ -29,5 +29,6 @@ namespace Shoponline1.Models
         public Nullable<int> order { get; set; }
         public Nullable<System.DateTime> datebegin { get; set; }
         public Nullable<int> categoryid { get; set; }
+        public Nullable<long> brandid { get; set; }
     }
 }

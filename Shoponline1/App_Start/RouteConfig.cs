@@ -9,6 +9,15 @@ namespace Shoponline1
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+            routes.MapRoute("BrandDetail", "{type}/{metatitle}",
+              new { controller = "Brand", action = "detail", metatitle = UrlParameter.Optional },
+              new RouteValueDictionary
+              {
+                    { "type", "hang" }
+              },
+              namespaces: new[] { "shoponline1.Controllers" });
+ 
+
             routes.MapRoute("News", "{type}",
               new { controller = "News", action = "Index", meta = UrlParameter.Optional },
               new RouteValueDictionary
@@ -41,6 +50,7 @@ namespace Shoponline1
                     { "type", "san-pham" }
                },
                namespaces: new[] { "shoponline1.Controllers" });
+ 
 
             routes.MapRoute(
                 name: "Default",

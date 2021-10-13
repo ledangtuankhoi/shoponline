@@ -9,7 +9,7 @@ namespace Shoponline1.Controllers
 {
     public class NewsController : Controller
     {
-        ShopOnlineEntities1 _db = new ShopOnlineEntities1();
+        ShopOnlineEntities _db = new ShopOnlineEntities();
 
         // GET: News
         public ActionResult Index()

@@ -25,6 +25,8 @@ namespace Shoponline1.Models
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<Banner> Banners { get; set; }
+        public virtual DbSet<Brand> Brands { get; set; }
         public virtual DbSet<category> categories { get; set; }
         public virtual DbSet<menu> menus { get; set; }
         public virtual DbSet<News> News { get; set; }

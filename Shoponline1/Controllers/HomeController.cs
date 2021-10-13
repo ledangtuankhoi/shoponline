@@ -6,11 +6,10 @@ using System.Web.Mvc;
 using Shoponline1.Models;
 
 namespace Shoponline1.Controllers
-{
-    [HandleError]
+{ 
     public class HomeController : Controller
     {
-        ShopOnlineEntities1 _db = new ShopOnlineEntities1();
+        ShopOnlineEntities _db = new ShopOnlineEntities();
         public ActionResult Index()
         {
             return View();
@@ -37,6 +36,26 @@ namespace Shoponline1.Controllers
             return PartialView(categorys.ToList());
         }
 
+        public ActionResult getProduct()
+        {
+            ViewBag.meta = "san-pham";
+            var categorys = from table in _db.products
+                            where table.hdie == true
+                            orderby table.order
+                            ascending
+                            select table;
+            return PartialView(categorys.ToList());
+        }
+
+        public ActionResult getProductByBrand()
+        {
+            ViewBag.meta = "san-pham";
+            var categorys = from table in _db.products
+                            where table.hdie == true 
+                            select table;
+            return PartialView(categorys.ToList());
+        }
+
 
         public ActionResult getNews()
         {
@@ -48,6 +67,14 @@ namespace Shoponline1.Controllers
                         select table;
             return PartialView(posts.ToList());
         }
-         
+
+
+        public ActionResult getBrand()
+        {
+            ViewBag.meta = "hang";
+            var view = from table in _db.Brands 
+                       select table;
+            return PartialView(view);
+        }
     }
 }
