@@ -76,5 +76,10 @@ namespace Shoponline1.Controllers
                        select table;
             return PartialView(view);
         }
+
+        public ActionResult text()
+        {
+            return View();
+        }
     }
 }

@@ -78,11 +78,10 @@
                     </div><!-- End .toolbox -->
 
                     <div class="products">
-                        <div class="row">
-                            
+                        <div class="row"> 
                                 @*Product by brand*@
 
-                                @Html.Action("getProductByBrand", "product", new { brandid = Model.id, metatitle = "" });
+                                @Html.Action("getProductByBrand", "product", new { brandid = Model.id, metatitle = "san-pham" });
 
                                 @*END Product by brand*@
 

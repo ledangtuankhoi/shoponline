@@ -1,10 +1,11 @@
-﻿@foreach (var item in Model)
+﻿@*<h1>@Model[0].meta</h1>*@
+@foreach (var item in Model)
 {
     <div class="col-6 col-md-4 col-lg-4 col-xl-3 col-xxl-2">
         <div class="product">
             <figure class="product-media">
                 <span class="product-label label-new">New</span>
-                <a href="product.html">
+                <a href='@Url.Action("getProductDetail","Product",new {metatitle = item.meta })'>
                     <img src="~/Assets/fontend/images/products/@item.img" alt="Product image" class="product-image">
                 </a>
 
@@ -34,7 +35,7 @@
                     <a href="#">Women</a>
                 </div><!-- End .product-cat -->
                 <h3 class="product-title">
-                    <a href="product.html">
+                    <a href="@ViewBag.meta">
                         @item.name
                     </a>
                 </h3><!-- End .product-title -->

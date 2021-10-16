@@ -2,14 +2,14 @@
 <div class="col-lg-4 col-md-4">
     <div class="product-lg">
         <figure class="product-media">
-            <a href="product.html">
+            <a href="@Url.Action("getProductDetail","Product",new {metatitle = Model[0].meta })">
                 <img src="~/Assets/fontend/images/demos/demo-22/featured/@Model[0].img" alt="Product image" class="product-image">
             </a>
 
         </figure><!-- End .product-media -->
 
         <div class="product-body">
-            <h3 class="product-title"><a href="product.html">@Model[0].name  </a></h3><!-- End .product-title -->
+            <h3 class="product-title"><a href="@Url.Action("getProductDetail","Product",new {metatitle = Model[0].meta })">@Model[0].name  </a></h3><!-- End .product-title -->
             <div class="product-price">
                 <span class="new-price">$@Model[0].price</span>
             </div><!-- End .product-price -->
@@ -34,7 +34,7 @@
                         <div class="col-lg-4 col-6">
                             <div class="product product-3 text-center">
                                 <figure class="product-media">
-                                    <a href="product.html">
+                                    <a href="@Url.Action("getProductDetail","Product",new {metatitle = Model[0].meta })">
                                         <img src="~/Assets/fontend/images/demos/demo-22/featured/@Model[i].img" alt="Product image" class="product-image">
                                     </a>
 
@@ -44,7 +44,7 @@
                                 </figure><!-- End .product-media -->
 
                                 <div class="product-body">
-                                    <h3 class="product-title"><a href="product.html">@Model[i].name</a></h3><!-- End .product-title -->
+                                    <h3 class="product-title"><a href="@Url.Action("getProductDetail","Product",new {metatitle = Model[0].meta })">@Model[i].name</a></h3><!-- End .product-title -->
                                     <div class="product-price">
                                         <span class="new-price">$@Model[i].price</span>
                                     </div><!-- End .product-price -->
@@ -73,7 +73,7 @@
                         <div class="col-lg-4 col-6">
                             <div class="product product-3 text-center">
                                 <figure class="product-media"> 
-                                    <a href="product.html">
+                                    <a href="@Url.Action("getProductDetail","Product",new {metatitle = Model[0].meta })">
                                         <img src="~/Assets/fontend/images/demos/demo-22/featured/@Model[i].img" alt="Product image" class="product-image">
                                     </a>
 
@@ -83,7 +83,7 @@
                                 </figure><!-- End .product-media -->
 
                                 <div class="product-body"> 
-                                    <h3 class="product-title"><a href="product.html">@Model[i].name</a></h3><!-- End .product-title -->
+                                    <h3 class="product-title"><a href="@Url.Action("getProductDetail","Product",new {metatitle = Model[0].meta })">@Model[i].name</a></h3><!-- End .product-title -->
                                     <div class="product-price">
                                         <span class="new-price">$@Model[i].price</span> 
                                     </div><!-- End .product-price -->

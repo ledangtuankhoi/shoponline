@@ -3,7 +3,7 @@
 @foreach (var item in Model)
 {
     <div class="col-lg-6 col-md-6 col-sm-6 banner-lg">
-        <a href="category.html">
+        <a href="@item.action">
             <img src="Assets/fontend/images/demos/demo-22/banner/@item.img">
         </a>
         <div class="banner-content">
@@ -15,8 +15,8 @@
                     @Html.Raw(HttpUtility.HtmlDecode(item.content.ToString()))
                 </a>
             </div>
-            <div class="@item.action">
-                <a href="category.html">discover now</a>
+            <div class="">
+                <a href="@item.action">discover now</a>
             </div>
         </div>
     </div>

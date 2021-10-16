@@ -12,7 +12,7 @@
           <Property Name="id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="title" Type="nvarchar" MaxLength="255" Nullable="false" />
           <Property Name="content" Type="ntext" />
-          <Property Name="action" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="action" Type="ntext" Nullable="false" />
           <Property Name="hide" Type="bit" />
           <Property Name="img" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="status" Type="varchar" MaxLength="10" Nullable="false" />
@@ -120,7 +120,7 @@ warning 6013: The table/view 'ShopOnline.dbo.Footers' does not have a primary ke
           <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="title" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="content" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="action" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="action" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="hide" Type="Boolean" />
           <Property Name="img" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="status" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />

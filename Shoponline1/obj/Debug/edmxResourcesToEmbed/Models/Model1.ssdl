@@ -7,7 +7,7 @@
     <Property Name="id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="title" Type="nvarchar" MaxLength="255" Nullable="false" />
     <Property Name="content" Type="ntext" />
-    <Property Name="action" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="action" Type="ntext" Nullable="false" />
     <Property Name="hide" Type="bit" />
     <Property Name="img" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="status" Type="varchar" MaxLength="10" Nullable="false" />
